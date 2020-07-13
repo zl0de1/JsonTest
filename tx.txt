@@ -1,0 +1,1 @@
+{"response":[{"id":12274165,"first_name":"Роман","last_name":"Романов","is_closed":false,"can_access_closed":true}]}
