@@ -10,14 +10,18 @@ namespace JsonTest
     {
         static void Main(string[] args)
         {
-            string input = File.ReadAllText("tx.txt");
-            User res = JsonConvert.DeserializeObject<User>(input);
-            Console.WriteLine(res.response[0].id + res.response[0].last_name);
+            string input = File.ReadAllText("tx.txt");  //с response
+            User user = JsonConvert.DeserializeObject<User>(input);
+            Console.WriteLine(user.response[0]);
             
-            string json = File.ReadAllText("tx2.txt");
+            string json = File.ReadAllText("tx2.txt");  //без response в начале
             Response res2 = JsonConvert.DeserializeObject<Response>(json);
-            Console.WriteLine(res2.id + " " + res2.last_name);
+            Console.WriteLine(res2.ToString());
+
             Console.ReadKey();
+
+            // Возможно, после ключевого слова response в других ответах будет еще значение count
+            // например, в методе getfriend или тп, по этому нам и нужен лист user's
         }
     }
 }

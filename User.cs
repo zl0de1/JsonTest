@@ -12,7 +12,12 @@ namespace JsonTest
         public string first_name { get; set; }
         public string last_name { get; set; }
         public bool is_closed { get; set; }
-        public bool can_access_closed { get; set; }  
+        public bool can_access_closed { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1} id:{2}", first_name, last_name, id);
+        }
     }
 
     public class User
